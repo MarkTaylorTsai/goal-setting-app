@@ -1,11 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
-function All(){
+function GoalChart(){
     return(
         <div>
-            <h1>fargrf</h1>
+
+        <Link to='/'>去首頁</Link>
         </div>
     )
 }
 
-export default All;
+export default GoalChart;
