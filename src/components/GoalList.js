@@ -8,7 +8,7 @@ function GoalList(){
     
     return(
         <div>
-            <Link to={`/goal}`}>查看詳細情形</Link>
+            <Link to="/chart">查看詳細情形</Link>
         </div>
     )
 }
