@@ -17,7 +17,6 @@ function HomePage(){
         })
     }
     const deleteGoal = (selectedGoal) => {
-        console.log("onDeleteGoal received", selectedGoal)
         onDeleteGoal(selectedGoal)
     }
 
@@ -36,8 +35,7 @@ function HomePage(){
                                     }>
                                     {showItem[goal.id] ? '隱藏行動計畫' : '顯示行動計畫'}
                                 </button>
-                                <button onClick={() => deleteGoal(goal)
-                                }>移除目標</button>
+                                <button onClick={() => deleteGoal(goal)}>目標達成</button>
                                 {showItem[goal.id] && (
                                     <ul>
                                         <li>
@@ -56,6 +54,7 @@ function HomePage(){
                                 <button onClick={() => toggleSubItem(goal.id)}>
                                     {showItem[goal.id] ? '隱藏行動計畫' : '顯示行動計畫'}
                                 </button>
+                                <button onClick={() => deleteGoal(goal)}>目標達成</button>
                                 {showItem[goal.id] && (
                                     <ul>
                                         <li>
@@ -71,10 +70,11 @@ function HomePage(){
                         {monthly.map((goal) => (
                             <li key={goal.id}>
                                 {goal.title}
-                                <br/>
                                 <button onClick={() => toggleSubItem(goal.id)}>
                                     {showItem[goal.id] ? '隱藏行動計畫' : '顯示行動計畫'}
                                 </button>
+                                <button onClick={() => deleteGoal(goal)}>目標達成</button>
+                                <br/>
                                 {showItem[goal.id] && (
                                     <ul>
                                         <li>
@@ -93,6 +93,7 @@ function HomePage(){
                                 <button onClick={() => toggleSubItem(goal.id)}>
                                     {showItem[goal.id] ? '隱藏行動計畫' : '顯示行動計畫'}
                                 </button>
+                                <button onClick={() => deleteGoal(goal)}>目標達成</button>
                                 {showItem[goal.id] && (
                                     <ul>
                                         <li>
@@ -111,6 +112,7 @@ function HomePage(){
                             <button onClick={() => toggleSubItem(goal.id)}>
                                 {showItem[goal.id] ? '隱藏行動計畫' : '顯示行動計畫'}
                             </button>
+                            <button onClick={() => deleteGoal(goal)}>目標達成</button>
                             {showItem[goal.id] && (
                                 <ul>
                                     <li>
